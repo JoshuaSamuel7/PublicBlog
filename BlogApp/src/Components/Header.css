@@ -1,0 +1,98 @@
+/* Modern Hover Effects for Header Buttons */
+
+.header {
+  background-image: linear-gradient(0deg, #001b32, #193d47, #204b63, #193d47, #001b32); /* Blue header background */
+  color: #ffffff; /* White text color */
+  padding: 10px 0;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-title {
+  margin-left: 20px; /* Adjust spacing as needed */
+  font-size: 24px;
+  font-weight: bold;
+  animation: slide-in-left 0.5s ease;
+}
+
+.header-nav {
+  margin-right: 20px; /* Adjust spacing as needed */
+  animation: slide-in-right 0.5s ease;
+}
+
+.header-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  color: #ffffff; /* White text color */
+  background-color: transparent;
+  border: 2px solid transparent; /* Initially transparent border */
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.header-button:hover {
+  color: #3498db; /* Blue text color on hover */
+  border-color: #3498db; /* Blue border color on hover */
+  transform: translateY(-3px); /* Move button up on hover */
+}
+
+.header-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3498db; /* Blue underline */
+  transform: scaleX(0); /* Initially hidden */
+  transition: transform 0.3s ease;
+}
+
+.header-button:hover::after {
+  transform: scaleX(1); /* Expand underline on hover */
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.logoutbtn{
+  margin: 0 15px;
+}
+.imgph{
+  width: 3vh;
+  height: 3vh;
+  border-radius: 25px;
+  position: relative;
+  right: 5px;
+  top: 5px;
+}
